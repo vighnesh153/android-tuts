@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">AboutMe</string>
+    <string name="pikachu">Pikachu</string>
+    <string name="big_star">big star</string>
+    <string name="bio">
+Hi, my name is Pikachu.\n\n
+
+I am a thunder type pokemon.\n\n
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi harum placeat tempore
+ velit. A accusantium adipisci dolorum explicabo fugiat ipsum iste itaque officiis, placeat quis,
+ temporibus, tenetur velit vitae!\n\n
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi harum placeat tempore
+ velit. A accusantium adipisci dolorum explicabo fugiat ipsum iste itaque officiis, placeat quis,
+ temporibus, tenetur velit vitae!\n\n
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi harum placeat tempore
+ velit. A accusantium adipisci dolorum explicabo fugiat ipsum iste itaque officiis, placeat quis,
+ temporibus, tenetur velit vitae!\n\n
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi harum placeat tempore
+ velit. A accusantium adipisci dolorum explicabo fugiat ipsum iste itaque officiis, placeat quis,
+ temporibus, tenetur velit vitae!\n\n
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi harum placeat tempore
+ velit. A accusantium adipisci dolorum explicabo fugiat ipsum iste itaque officiis, placeat quis,
+ temporibus, tenetur velit vitae!\n\n
+    </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done">DONE</string>
 </resources>

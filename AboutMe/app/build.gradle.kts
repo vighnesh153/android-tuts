@@ -7,16 +7,6 @@ android {
     namespace = "com.example.aboutme"
     compileSdk = 34
 
-    defaultConfig {
-        applicationId = "com.example.aboutme"
-        minSdk = 19
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -25,6 +15,20 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    defaultConfig {
+        applicationId = "com.example.aboutme"
+        minSdk = 19
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

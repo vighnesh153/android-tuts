@@ -3,6 +3,10 @@
     <style name="Base.Theme.AboutMe" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">#008577</item>
+        <item name="colorSecondary">#00574B</item>
+        <item name="colorAccent">#76BF5E</item>
     </style>
 
     <style name="Theme.AboutMe" parent="Base.Theme.AboutMe" />
