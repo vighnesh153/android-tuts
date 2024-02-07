@@ -15,6 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {
