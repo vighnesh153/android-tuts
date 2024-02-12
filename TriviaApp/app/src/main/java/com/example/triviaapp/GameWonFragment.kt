@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.triviaapp.databinding.FragmentGameWonBinding
 
 
@@ -17,6 +18,9 @@ class GameWonFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_game_won, container, false
+        )
+        binding.nextMatchButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_gameWonFragment_to_gameFragment)
         )
         return binding.root
     }
