@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.extensions)
+    implementation("com.jakewharton.timber:timber:4.7.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
