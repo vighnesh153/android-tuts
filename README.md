@@ -6,4 +6,5 @@
 4. TriviaApp: An app to learn about app navigation (activities and fragments)
 5. DesertPusher: An app to learn about activity lifecycle
 6. GuessTheWord: An app to understand the app architecture (MVVM)
+7. SleepQualityTracker: An app to learn about persistant storage (using Room library)
 
