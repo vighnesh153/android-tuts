@@ -2,6 +2,7 @@ package com.example.android.dessertpusher
 
 import android.content.ActivityNotFoundException
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -10,6 +11,7 @@ import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleObserver
 import com.example.android.dessertpusher.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     // Contains all the views
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var dessertTimer: DessertTimer
 
     /** Dessert Data **/
 
@@ -48,12 +52,19 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        Timber.i("onCreate: called")
+        dessertsSold = 0
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.dessertButton.setOnClickListener {
             onDessertClicked()
+        }
+
+        dessertTimer = DessertTimer(this.lifecycle)
+
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt(REVENUE_KEY)
         }
 
         // Set the TextViews to the right values
@@ -114,8 +125,10 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         try {
             startActivity(shareIntent)
         } catch (ex: ActivityNotFoundException) {
-            Toast.makeText(this, getString(R.string.sharing_not_available),
-                Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                this, getString(R.string.sharing_not_available),
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
@@ -129,5 +142,54 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             R.id.shareMenuButton -> onShare()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.i("onStart: called")
+//        dessertTimer.startTimer()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume: called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause: called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy: called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart: called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop: called")
+//        dessertTimer.stopTimer()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Timber.i("onSaveInstanceState: called")
+
+        outState.putInt(REVENUE_KEY, revenue)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Timber.i("onRestoreInstanceState: called")
+    }
+
+    private companion object {
+        const val TAG = "MainActivity"
+        const val REVENUE_KEY = "key_revenue"
     }
 }
