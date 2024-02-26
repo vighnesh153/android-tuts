@@ -52,7 +52,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
