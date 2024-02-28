@@ -12,45 +12,67 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5.dp"
-        android:background="@color/lightgrey">
+        android:background="@color/lightgrey"
+        android:minHeight="100dp"
+        android:paddingBottom="20dp">
 
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="pikachu is the best"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:srcCompat="@tools:sample/avatars"
+            />
+
+        <TextView
+            android:id="@+id/authorNameView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@{myComment.name}"
             android:textSize="16.sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Name" />
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toStartOf="@+id/emailView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintWidth_percent="0.4"
+            tools:text="lorem ipsum dolal set kdjsna kjn daks dkjnas sjnakdn sjanasdk" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/emailView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/roboto_light"
+            android:text="@{myComment.email}"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintWidth_percent="0.3"
+            tools:text="email@email.com ds ds ds ds sd sdsds" />
+
+        <TextView
+            android:id="@+id/commentView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto"
             android:text="@{myComment.body}"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/emailView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/authorNameView"
+            app:layout_constraintWidth_percent="0.92"
             tools:text="Comment!!" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto_light"
-            android:text="@{myComment.email}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="email@email.com" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

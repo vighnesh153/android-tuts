@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.allaboutviews.databinding.MyFragmentBinding
@@ -17,7 +17,7 @@ class MyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.my_fragment, container, false)
+        binding = MyFragmentBinding.inflate(inflater, container, false)
 
         binding.lifecycleOwner = this
 
@@ -26,11 +26,18 @@ class MyFragment : Fragment() {
 
         binding.myViewModel = viewModel
 
-        val adapter = MyRecyclerViewAdapter()
+        val adapter = MyRecyclerViewAdapter(this)
         binding.myRecyclerView.adapter = adapter
 
         viewModel.comments.observe(viewLifecycleOwner) {
             adapter.submitList(it ?: emptyList())
+        }
+
+        viewModel.fetchCommentsError.observe(viewLifecycleOwner) {
+            it?.let {
+                Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+            }
+            viewModel.doneProcessingFetchCommentsError()
         }
 
         return binding.root

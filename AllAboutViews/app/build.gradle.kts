@@ -52,9 +52,27 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    // recycler view
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // androidx.lifecycle
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+
+    // Http client library
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+    // json serialization/deserialization
+    implementation("com.squareup.moshi:moshi:1.15.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+
+    // kotlinx coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+
+    // glide image library
+    implementation("com.github.bumptech.glide:glide:4.14.2")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
