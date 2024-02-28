@@ -1,10 +1,13 @@
-package com.example.allaboutviews
+package com.example.allaboutviews.view_model
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.allaboutviews.network.JsonPlaceholderApi
+import com.example.allaboutviews.data.MyComment
+import com.example.allaboutviews.data.MyPhoto
 import kotlinx.coroutines.launch
 
 class MyViewModel : ViewModel() {

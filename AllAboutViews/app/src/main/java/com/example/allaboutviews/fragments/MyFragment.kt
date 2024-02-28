@@ -1,4 +1,4 @@
-package com.example.allaboutviews
+package com.example.allaboutviews.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.allaboutviews.recyclerview.MyRecyclerViewAdapter
 import com.example.allaboutviews.databinding.MyFragmentBinding
+import com.example.allaboutviews.view_model.MyViewModel
+import com.example.allaboutviews.view_model.MyViewModelFactory
 
 class MyFragment : Fragment() {
     private lateinit var binding: MyFragmentBinding

@@ -8,4 +8,5 @@
 6. GuessTheWord: An app to understand the app architecture (MVVM)
 7. SleepQualityTracker: An app to learn about persistant storage (using Room library)
 8. SleepQualityTrackerWithRecyclerViews: An app to learn about recycler views
+9. AllBoutViews: An all rounder app to learn about android
 

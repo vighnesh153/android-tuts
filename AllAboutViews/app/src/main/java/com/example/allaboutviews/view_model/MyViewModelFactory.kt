@@ -1,6 +1,5 @@
-package com.example.allaboutviews
+package com.example.allaboutviews.view_model
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
