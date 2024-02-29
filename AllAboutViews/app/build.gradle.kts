@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
-    id("com.google.devtools.ksp") version "1.9.21-1.0.15"
+    id("com.google.devtools.ksp") version "2.0.0-Beta4-1.0.17"
     id("androidx.navigation.safeargs")
     id("org.jetbrains.kotlin.plugin.parcelize")
 }
@@ -73,6 +73,12 @@ dependencies {
 
     // glide image library
     implementation("com.github.bumptech.glide:glide:4.14.2")
+
+    // room database
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
