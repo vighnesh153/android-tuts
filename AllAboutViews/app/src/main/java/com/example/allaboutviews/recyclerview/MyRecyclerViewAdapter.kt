@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.allaboutviews.data.MyComment
+import com.example.allaboutviews.network.data.MyComment
 import com.example.allaboutviews.databinding.CommentViewBinding
 
 class MyRecyclerViewAdapter(private val fragment: Fragment) :

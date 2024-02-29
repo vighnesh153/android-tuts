@@ -1,4 +1,4 @@
-package com.example.allaboutviews.data
+package com.example.allaboutviews.network.data
 
 data class MyPhoto(
     val id: Int,

@@ -1,4 +1,4 @@
-package com.example.allaboutviews.data
+package com.example.allaboutviews.network.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,7 +1,7 @@
 package com.example.allaboutviews.network
 
-import com.example.allaboutviews.data.MyComment
-import com.example.allaboutviews.data.MyPhoto
+import com.example.allaboutviews.network.data.MyComment
+import com.example.allaboutviews.network.data.MyPhoto
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
