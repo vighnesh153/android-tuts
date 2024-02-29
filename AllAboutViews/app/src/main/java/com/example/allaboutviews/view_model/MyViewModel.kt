@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.allaboutviews.network.JsonPlaceholderApi
-import com.example.allaboutviews.network.data.MyComment
-import com.example.allaboutviews.network.data.MyPhoto
+import com.example.allaboutviews.domain.MyComment
+import com.example.allaboutviews.domain.MyPhoto
 import kotlinx.coroutines.launch
 
 class MyViewModel : ViewModel() {

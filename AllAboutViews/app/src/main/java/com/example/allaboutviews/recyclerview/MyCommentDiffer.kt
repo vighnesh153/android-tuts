@@ -1,7 +1,7 @@
 package com.example.allaboutviews.recyclerview
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.allaboutviews.network.data.MyComment
+import com.example.allaboutviews.domain.MyComment
 
 class MyCommentDiffer : DiffUtil.ItemCallback<MyComment>() {
     // checks if item has been added, deleted or moved

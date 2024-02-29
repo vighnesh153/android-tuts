@@ -7,7 +7,7 @@
 
         <variable
             name="myComment"
-            type="com.example.allaboutviews.network.data.MyComment" />
+            type="com.example.allaboutviews.domain.MyComment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
