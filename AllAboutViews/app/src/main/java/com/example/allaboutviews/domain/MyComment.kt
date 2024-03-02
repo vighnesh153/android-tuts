@@ -1,7 +1,7 @@
 package com.example.allaboutviews.domain
 
 import android.os.Parcelable
-import com.example.allaboutviews.database.DatabaseComment
+import com.example.allaboutviews.database.entities.DatabaseComment
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -14,7 +14,7 @@ data class MyComment(
     val imageUrl: String? = null,
 ) : Parcelable
 
-fun List<MyComment>.asDatabaseModel(): List<DatabaseComment> {
+fun List<MyComment>.asDatabaseModel(): Array<DatabaseComment> {
     return map {
         DatabaseComment(
             id = it.id,
@@ -24,5 +24,5 @@ fun List<MyComment>.asDatabaseModel(): List<DatabaseComment> {
             body = it.body,
             imageUrl = it.imageUrl,
         )
-    }
+    }.toTypedArray()
 }

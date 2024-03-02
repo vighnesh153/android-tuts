@@ -4,34 +4,35 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.allaboutviews.database.dao.CommentDao
-import com.example.allaboutviews.database.entities.DatabaseComment
+import com.example.allaboutviews.database.dao.PhotosDao
+import com.example.allaboutviews.database.entities.DatabasePhoto
+
 
 @Database(
     entities = [
-        DatabaseComment::class
+        DatabasePhoto::class
     ],
     version = 1,
     exportSchema = false
 )
-abstract class CommentDatabase : RoomDatabase() {
+abstract class PhotosDatabase: RoomDatabase() {
 
-    abstract val commentDao: CommentDao
+    abstract val photosDao: PhotosDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE: CommentDatabase? = null
+        private var INSTANCE: PhotosDatabase? = null
 
-        fun getInstance(context: Context): CommentDatabase {
+        fun getInstance(context: Context): PhotosDatabase {
             synchronized(this) {
                 var instance = INSTANCE
                 if (instance == null) {
                     instance = Room
                         .databaseBuilder(
                             context.applicationContext,
-                            CommentDatabase::class.java,
-                            "comments_database",
+                            PhotosDatabase::class.java,
+                            "photos_database",
                         )
                         .fallbackToDestructiveMigration()
                         .build()

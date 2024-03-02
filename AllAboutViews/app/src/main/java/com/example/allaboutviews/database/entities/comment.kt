@@ -1,4 +1,4 @@
-package com.example.allaboutviews.database
+package com.example.allaboutviews.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
