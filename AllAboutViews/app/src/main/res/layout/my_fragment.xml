@@ -25,16 +25,7 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="16.dp"
             android:contentDescription="pikachu is the best"
-            android:onClick="@{() -> myViewModel.onFabClicked()}"
-            app:srcCompat="@drawable/baseline_add_24" />
+            android:onClick="@{() -> myViewModel.showNotification()}"
+            app:srcCompat="@drawable/baseline_notifications_24" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="My fragment"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 </layout>

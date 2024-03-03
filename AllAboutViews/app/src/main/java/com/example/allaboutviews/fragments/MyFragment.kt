@@ -20,7 +20,7 @@ class MyFragment : Fragment() {
         }
 
         val viewModelFactory = MyViewModelFactory(activity.application)
-        ViewModelProvider(this, viewModelFactory).get(MyViewModel::class.java)
+        ViewModelProvider(this, viewModelFactory)[MyViewModel::class.java]
     }
 
     override fun onCreateView(
