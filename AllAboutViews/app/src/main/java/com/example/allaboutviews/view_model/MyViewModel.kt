@@ -2,6 +2,7 @@ package com.example.allaboutviews.view_model
 
 import android.app.Application
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
@@ -14,7 +15,7 @@ import com.example.allaboutviews.repository.CommentsRepository
 import com.example.allaboutviews.repository.PhotosRepository
 import kotlinx.coroutines.launch
 
-class MyViewModel(application: Application) : ViewModel() {
+class MyViewModel(private val application: Application) : ViewModel() {
     private val commentsDatabase = CommentDatabase.getInstance(application)
     private val commentsRepository = CommentsRepository(commentsDatabase)
 
@@ -34,5 +35,9 @@ class MyViewModel(application: Application) : ViewModel() {
             commentsRepository.refreshComments()
             photosRepository.refreshPhotos()
         }
+    }
+
+    fun onFabClicked() {
+        Toast.makeText(application, "Floating action button clicked!", Toast.LENGTH_SHORT).show()
     }
 }
