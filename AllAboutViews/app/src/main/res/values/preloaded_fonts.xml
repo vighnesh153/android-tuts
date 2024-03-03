@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/lobster_two</item>
+        <item>@font/lobster_two_bold</item>
         <item>@font/roboto</item>
         <item>@font/roboto_bold</item>
+        <item>@font/roboto_light</item>
     </array>
 </resources>

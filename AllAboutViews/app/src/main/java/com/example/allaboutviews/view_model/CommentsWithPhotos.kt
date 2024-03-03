@@ -11,18 +11,26 @@ class CommentsWithPhotos(
 ) : MediatorLiveData<List<MyComment>>() {
     init {
         addSource(comments) { comments ->
-            value = comments.ifEmpty { defaultComments }.map {
-                it.copy(
-                    imageUrl = photos.value?.ifEmpty { defaultPhotos }?.random()?.url
+            value = comments.ifEmpty { defaultComments }.mapIndexed { index, comment ->
+                comment.copy(
+                    imageUrl = getPhotoUrl(index, photos.value)
                 )
             }
         }
         addSource(photos) { photos ->
-            value = comments.value?.ifEmpty { defaultComments }?.map {
-                it.copy(
-                    imageUrl = photos.ifEmpty { defaultPhotos }.random().url
+            value = comments.value?.ifEmpty { defaultComments }?.mapIndexed { index, comment ->
+                comment.copy(
+                    imageUrl = getPhotoUrl(index, photos)
                 )
             } ?: emptyList()
+        }
+    }
+
+    companion object {
+        fun getPhotoUrl(commentIndex: Int, photos: List<MyPhoto>?): String {
+            val photosProcessed = (photos ?: emptyList()).ifEmpty { defaultPhotos }
+            val index = commentIndex % photosProcessed.size
+            return photosProcessed.getOrNull(index)?.url ?: ""
         }
     }
 }

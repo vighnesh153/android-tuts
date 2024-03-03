@@ -10,3 +10,7 @@
 8. SleepQualityTrackerWithRecyclerViews: An app to learn about recycler views
 9. AllBoutViews: An all rounder app to learn about android
 
+
+## Things to remember
+1. Prefer downloadable fonts over adding fonts to your app. If you add a font (.ttf or .woff files) to your app, it won't be shared by other apps using the same font. Whereas, if you choose downloadable font (font file ending with xml), google play services will reuse the same font for all apps that want to use that font.
+

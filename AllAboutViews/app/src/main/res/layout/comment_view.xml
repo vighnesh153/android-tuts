@@ -28,19 +28,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:srcCompat="@tools:sample/avatars"
-            />
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/authorNameView"
+            style="@style/TextAppearance.Text.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto_bold"
             android:text="@{myComment.name}"
-            android:textSize="16.sp"
-            android:textColor="@color/gray"
             app:layout_constraintEnd_toStartOf="@+id/emailView"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="@+id/imageView"
@@ -52,10 +49,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/gray"
-            android:fontFamily="@font/roboto_light"
             android:text="@{myComment.email}"
             android:textAlignment="textEnd"
+            android:textColor="@color/gray"
+            app:fontFamily="@font/roboto_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintWidth_percent="0.3"
@@ -63,12 +60,11 @@
 
         <TextView
             android:id="@+id/commentView"
+            style="@style/TextAppearance.Text.Subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@{myComment.body}"
-            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/emailView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/authorNameView"

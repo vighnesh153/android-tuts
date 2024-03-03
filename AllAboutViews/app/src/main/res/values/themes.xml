@@ -1,9 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AllAboutViews" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AllAboutViews" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="fontFamily">@font/lobster_two</item>-->
     </style>
 
     <style name="Theme.AllAboutViews" parent="Base.Theme.AllAboutViews" />
+
+    <style name="TextAppearance.Text" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/lobster_two</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="TextAppearance.Text.Title">
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="TextAppearance.Text.Subtitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
