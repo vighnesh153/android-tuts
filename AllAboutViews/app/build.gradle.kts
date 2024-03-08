@@ -57,6 +57,7 @@ dependencies {
 
     // androidx.lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+//    implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
     // Http client library
@@ -73,6 +74,8 @@ dependencies {
 
     // glide image library
     implementation("com.github.bumptech.glide:glide:4.14.2")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // room database
     val roomVersion = "2.6.1"
