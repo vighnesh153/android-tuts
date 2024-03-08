@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">AllAboutViews</string>
     <string name="custom_views">Custom Views</string>
+    <string name="compose_views_java_interop">Compose Views Java Interop</string>
+    <string name="hello_from_fragment">Hello from fragment</string>
 </resources>

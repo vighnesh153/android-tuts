@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigationRoot"
-    app:startDestination="@id/myFragment">
+    app:startDestination="@id/composeViewsJavaInterop">
 
     <fragment
         android:id="@+id/myFragment"
@@ -11,9 +11,16 @@
         <action
             android:id="@+id/action_myFragment_to_customViewsFragment"
             app:destination="@id/customViewsFragment" />
+        <action
+            android:id="@+id/action_myFragment_to_composeViewsJavaInterop"
+            app:destination="@id/composeViewsJavaInterop" />
     </fragment>
     <fragment
         android:id="@+id/customViewsFragment"
         android:name="com.example.allaboutviews.fragments.CustomViewsFragment"
         android:label="CustomViewsFragment" />
+    <fragment
+        android:id="@+id/composeViewsJavaInterop"
+        android:name="com.example.allaboutviews.fragments.MyComposeViewJavaFragment"
+        android:label="ComposeViewJavaFragment" />
 </navigation>

@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
-    id("com.google.devtools.ksp") version "2.0.0-Beta4-1.0.17"
+//    id("com.google.devtools.ksp") version "2.0.0-Beta4-1.0.17"
+    id("com.google.devtools.ksp") version "1.9.21-1.0.15"
     id("androidx.navigation.safeargs")
     id("org.jetbrains.kotlin.plugin.parcelize")
 }
@@ -34,10 +35,14 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -57,8 +62,9 @@ dependencies {
 
     // androidx.lifecycle
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
     // Http client library
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -89,6 +95,12 @@ dependencies {
 
     // timber logging
     implementation("com.jakewharton.timber:timber:5.0.1")
+
+    // jetpack compose
+    implementation("androidx.compose.ui:ui:1.7.0-alpha03")
+    implementation("androidx.compose.runtime:runtime-livedata:1.7.0-alpha03")
+    implementation("androidx.compose.foundation:foundation:1.7.0-alpha03")
+    implementation("androidx.compose.material3:material3:1.2.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

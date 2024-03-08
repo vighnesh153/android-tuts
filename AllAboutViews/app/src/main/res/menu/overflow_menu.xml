@@ -6,4 +6,9 @@
         android:icon="@drawable/pikachu"
         android:title="@string/custom_views" />
 
+    <item
+        android:id="@+id/composeViewsJavaInterop"
+        android:icon="@drawable/pikachu"
+        android:title="@string/compose_views_java_interop" />
+
 </menu>
